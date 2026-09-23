@@ -6,6 +6,32 @@ The platform is an auxiliary system. SAP remains the official purchasing system 
 
 The platform is also the controlled staging and reporting layer for Zycus. It does not replace SAP or Zycus: it captures source data, applies the approved Saving methodology, maintains lineage and approvals, reconciles totals, and produces an export-ready report.
 
+## Discovery-first direction
+
+The first objective is to understand the real Supply Chain project chain before committing to a final platform or automation design. The discovery must cover opportunities, sourcing, negotiation, contracts, purchase orders, implementation, measurement, validation, systems, data owners, responsibilities, spreadsheets, exceptions, and rework.
+
+Technology must support the proven process rather than impose a premature workflow or data model. The final solution may be a platform, a focused automation, an assisted process, or a combination, selected according to the actual volume, recurrence, data quality, control requirements, and process maturity.
+
+The long-term concept is a **Value Delivery Hub**: a single controlled entry point for Supply Chain data that can accept guided forms, Excel/CSV imports, evidence references, assisted document extraction, and future integrations. It should normalize these inputs, expose missing data and duplicates, preserve source lineage, support human review, and prepare validated records for reporting or Zycus export.
+
+The Hub is not required to replace existing systems immediately. It should reduce spreadsheet fragmentation while allowing existing processes to continue during discovery and controlled transition.
+
+## Prototype without production data
+
+The absence of a SAP API and the current unavailability of real Excel databases do not block discovery, architecture, or prototyping. The initial work can use interviews, Zycus screens and official tenant templates, synthetic data, anonymized examples, and local or disposable test storage.
+
+Do not create a corporate production database or treat prototype values as authoritative before data ownership, classification, quality responsibility, retention, access, security, approved environment, and governance are defined. Separate discovery, homologation, and production environments. Real data enters only after authorization and source-quality controls are approved.
+
+The immediate Zycus investigation must identify the tenant-specific screens, fields, mandatory values, statuses, validation rules, approval flow, import/export mechanisms, error responses, and official file layout. Public Zycus material confirms general API, SFTP, and iSaaS capabilities but does not confirm the organization's exact template. A preparatory internal model must not be treated as an official load contract.
+
+## Hub evolution path
+
+1. **Discovery:** map the real chain, systems, data, roles, calculations, validations, bottlenecks, and exceptions.
+2. **Input prototype:** provide initiative registration, guided steps, spreadsheet import, basic validation, evidence references, pending items, and manual review using synthetic or authorized data.
+3. **Consolidation and automation:** add approved calculation rules, targets, audit, dashboards, integrations, and controlled Zycus export.
+
+Candidate input capabilities include layout-aware Excel/CSV import, column mapping, row-level errors, duplicate detection, source-file preservation, correction and reprocessing, guided forms, evidence upload, assisted extraction, and review queues. Automation may suggest values and calculations, but must not approve Savings without approved rules, sufficient evidence, and an accountable reviewer.
+
 ## Proposed flow
 
 1. An approved source file or assisted capture is received from a buyer or process owner.
